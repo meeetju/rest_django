@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "a1b7d4cc-3c35-4d56-a900-3fec37f9a077",
+		"name": "Django REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All heroes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/heroes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"heroes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add hero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Arnold Schwarzenegger\",\r\n    \"alias\": \"Terminator\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/heroes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"heroes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A hero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/heroes/:hero_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"heroes",
+						":hero_id"
+					],
+					"variable": [
+						{
+							"key": "hero_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
